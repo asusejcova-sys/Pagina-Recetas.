@@ -1,0 +1,117 @@
+*{
+    background-color: rgb(247, 230, 241) 
+}
+h1
+{color: rgb(214, 97, 146)}
+h4{color: rgb(190, 136, 121)}  
+h2{color: rgb(190, 136, 121)} 
+ h3{color: rgb(247, 230, 241) }
+ a {color: rgb(255, 8, 111)}
+
+div{
+    display: flex;
+gap: 20px;}
+
+#principal {
+    background-color: darkred;
+}
+
+.carrusel-contenedor {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .carrusel {
+    display: flex; /* */
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .diapositiva {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .diapositiva img {
+    width: 100%;
+    display: block;
+  }
+  
+  .boton-carrusel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  .anterior {
+    left: 10px;
+  }
+  
+  .siguiente {
+    right: 10px;
+  }
+
+  /* Contenedor principal del carrusel */
+.carrusel-contenedor {
+    position: relative;
+    max-width: 600px; /* Ajusta el ancho deseado para el carrusel */
+    margin: 20px auto;
+    overflow: hidden; /* Oculta las imágenes fuera del marco */
+    border-radius: 8px;
+}
+
+/* Tira que contiene las diapositivas en horizontal */
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transición suave al deslizar */
+}
+
+/* Cada diapositiva individual */
+.diapositiva {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ajuste de las imágenes */
+.diapositiva img {
+    width: 100%;
+    height: 350px; /* Ajusta la altura deseada */
+    object-fit: cover;
+    display: block;
+}
+
+/* Botones de navegación */
+.boton-carrusel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 150, 215, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.boton-carrusel:hover {
+    background-color: rgba(247, 11, 255, 0.8);
+}
+
+.anterior {
+    left: 10px;
+}
+
+.siguiente {
+    right: 10px;
+}
+  
