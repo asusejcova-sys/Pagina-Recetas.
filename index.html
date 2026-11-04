@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilo.css" rel="stylesheet">
+    <title>Recetas</title>
+</head>
+<body>
+
+    <div class="menu-navegacion">
+        <a href="Receta.html">Cookies!</a>
+        <a href="Panqueques.html">Panqueques!</a>
+        <a href="cupcakes.html">Cupcakes!</a>
+        <a href="chocotorta.html">Chocotorta!</a>
+        <a href="serenito.html">Serenito!</a>
+    </div>
+
+    <h1>
+        <img src="OIP-removebg-preview (3).png" width="50px" alt="Icono de Recetas"> 
+        Recetas!
+    </h1> 
+
+    <p>Hacer cosas ricas no tiene por qué ser un dolor de cabeza. En esta página vas a encontrar recetas dulces explicadas paso a paso y pensadas para una sola cosa: que te salgan espectaculares. Hablamos de postres con muchísimo sabor, de esos bizcochuelos húmedos y cremas suaves que te hacen cerrar los ojos en el primer bocado. Da una vuelta por el menú, prendé el horno y animate a disfrutar de la pastelería sin complicaciones. ¡A disfrutar!</p>
+        
+    <div class="carrusel-contenedor">
+        <div class="carrusel" id="carrusel">
+            <div class="diapositiva">
+                <img src="https://handletheheat.com/wp-content/uploads/2013/10/Soft-Chocolate-Chip-Cookies-SQUARE.jpg" alt="Cookies">
+            </div>
+            <div class="diapositiva">
+                <img src="https://blog.amigofoods.com/wp-content/uploads/2021/04/dulce-de-leche-chocotorta.jpg" alt="Chocotorta">
+            </div>
+            <div class="diapositiva">
+                <img src="panqueque hd.webp" alt="Panqueque">
+            </div>
+            <div class="diapositiva">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4eKGZVlYJy_kve-sEsqZspI21LXDN0s8oPD2J9K6URw&s=10" alt="Postre">
+            </div>
+        </div>
+        
+        <button class="boton-carrusel anterior" onclick="mover(-1)">&#10094;</button>
+        <button class="boton-carrusel siguiente" onclick="mover(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let indiceActual = 0;
+
+        function mover(direccion) {
+            const diapositivas = document.querySelectorAll('.diapositiva');
+            const totalDiapositivas = diapositivas.length;
+            
+            indiceActual += direccion;
+
+            if (indiceActual >= totalDiapositivas) {
+                indiceActual = 0;
+            } else if (indiceActual < 0) {
+                indiceActual = totalDiapositivas - 1;
+            }
+
+            const carrusel = document.getElementById('carrusel');
+            carrusel.style.transform = `translateX(-${indiceActual * 100}%)`;
+        }
+    </script>
+</body>
+</html>
